@@ -21,7 +21,7 @@ export function Model(props:any) {
         geometry={nodes.Text_Text001.geometry}
         // material={nodes.Text_Text001.material}
       >
-        <meshStandardMaterial color={"hotpink"}/>
+        <meshStandardMaterial color={props.color}/>
       </mesh>
     </group>
   );
