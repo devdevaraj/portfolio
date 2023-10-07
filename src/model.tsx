@@ -16,8 +16,8 @@ export function Model(props:any) {
   return (
     <group {...props} dispose={null}>
       <mesh
-        // castShadow
-        // receiveShadow
+        castShadow
+        receiveShadow
         geometry={nodes.Text_Text001.geometry}
         // material={nodes.Text_Text001.material}
       >
