@@ -10,8 +10,7 @@ type GLTFResult = GLTF & {
 };
 
 export function Model(props:any) {
-  const { nodes, materials } = useGLTF(csoon) as GLTFResult;
-  console.log(materials);
+  const { nodes } = useGLTF(csoon) as GLTFResult;
   
   return (
     <group {...props} dispose={null}>
