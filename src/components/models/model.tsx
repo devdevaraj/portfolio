@@ -1,5 +1,5 @@
 import { useGLTF } from "@react-three/drei";
-import csoon from "../../assets/csoon.glb";
+import csoon from "@/assets/csoon.glb";
 import { GLTF } from "three-stdlib";
 
 type GLTFResult = GLTF & {

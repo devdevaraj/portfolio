@@ -1,9 +1,9 @@
 import { useRef, useState, Fragment } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh } from "three";
-import { Model } from "./components/models/model";
-import Body from "./pages/home/home"
-import './App.scss';
+import { Model } from "@/components/models/model";
+// import Body from "@/pages/home/home"
+import '@/App.scss';
 
 const pi = Math.PI;
 
@@ -26,7 +26,7 @@ function App() {
           <Box position={[0, 0, 0]} />
         </Canvas>
       </div>
-      <Body/>
+      {/* <Body/> */}
     </Fragment>
   )
 }
