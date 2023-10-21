@@ -1,25 +1,13 @@
-import { useEffect, useRef, useState, Fragment, Ref } from 'react';
+import { useRef, useState, Fragment } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Mesh } from "three";
-import { Model } from "./model";
+import { Model } from "./components/models/model";
+import Body from "./pages/home/home"
 import './App.scss';
 
 const pi = Math.PI;
 
 function App() {
-  // const scrlRef = useRef<HTMLDivElement>(null!);
-  // useEffect(() => {
-  //   console.log(scrlRef)
-  //   scrlRef.current.addEventListener("scroll", (event: Event) => {
-  //     let scrollTop = (event.target as HTMLDivElement).scrollTop;
-  //     let scrollHeight = (event.target as HTMLDivElement).scrollHeight;
-  //     let clientHeight = (event.target as HTMLDivElement).clientHeight;
-  //     console.log(scrollTop, scrollHeight, clientHeight);
-  //      let percentageScroll = (scrollTop + clientHeight) / scrollHeight;
-  //     //  console.log(percentageScroll);
-       
-  //   })
-  // });
 
   return (
     <Fragment>
@@ -38,7 +26,7 @@ function App() {
           <Box position={[0, 0, 0]} />
         </Canvas>
       </div>
-      {/* <Body ref={scrlRef} /> */}
+      <Body/>
     </Fragment>
   )
 }
@@ -76,29 +64,4 @@ function Box(props: any) {
       <meshStandardMaterial color={hovered ? 'hotpink' : 'orange'} />
     </mesh>
   )
-}
-
-
-function Body({ ref}:{ ref: Ref<HTMLDivElement> }) {
-  return(
-    <div className="body" id="body" ref={ref}>
-    <div className="scroll">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam dolorum iure non atque officia! Nisi asperiores, dolores voluptatibus officia magnam quis vero voluptate autem ipsum repudiandae velit. Deleniti, quo ea.
-    </div>
-  </div>
-  );
 }
