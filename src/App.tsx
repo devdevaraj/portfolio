@@ -2,7 +2,7 @@ import { Fragment } from 'react';
 import { Canvas } from '@react-three/fiber';
 
 // import Body from "@/pages/home/home"
-import Box from './components/coming-soon/coming-soon';
+import Box from '@/components/coming-soon/coming-soon';
 import '@/App.scss';
 
 
